@@ -351,7 +351,8 @@ template {
 fieldset {
    padding: 0;
    border: none;
- }/* mixins */
+ }@charset "UTF-8";
+/* mixins */
 /* hi */
 *, *::before, *::after {
   box-sizing: border-box; }
@@ -398,6 +399,10 @@ body {
     text-decoration: none;
     color: var(--clickable);
     font-family: Menlo, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
+.JGChoiceItem li .m-disabled-link {
+    opacity: 0.5; }
+.JGChoiceItem li .m-disabled-link.m-selected::before {
+      content: "✔"; }
 section.JGHTMLItem {
   margin-bottom: 2rem; }
 /* SEMANTIC */
@@ -473,6 +478,12 @@ section.JGHTMLItem {
   text-align: center;
   color: black;
   display: inline-block; }
+.planet.m-cold.m-terran .planet-label {
+  color: #aaaaff; }
+.planet.m-hot.m-terran .planet-label {
+  color: #ffaaaa; }
+.planet.m-habitable.m-terran .planet-label {
+  color: #88ff88; }
 .planet-circle.m-terran {
   width: 30px;
   height: 30px;
